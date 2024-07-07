@@ -21,9 +21,9 @@ class _HomeState extends State<Home> {
     "Vehicle Cell",
     "Trending Outliers1",
     "Trending Outliers2",
-    "abc",
-    "pqr",
-    "rob"
+    "Trending Outliers3",
+    "Trending Outliers4",
+    "Trending Outliers5"
   ];
   List<String> description = [
     "Quantitative Strategy",
@@ -33,9 +33,9 @@ class _HomeState extends State<Home> {
     "Short term Idea",
     "Quantitative Strategy1",
     "Quantitative Strategy2",
-    "abc",
-    "pqr",
-    "rob"
+    "Quantitative Strategy3",
+    "Quantitative Strategy4",
+    "Quantitative Strategy5"
   ];
 
   @override
