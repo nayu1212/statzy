@@ -13,6 +13,15 @@ class Mylist extends StatefulWidget {
 
 class _MylistState extends State<Mylist> {
   String activeTitle = "";
+  Set<String> myTitleSet = {};
+  void activeSet(String myCategoryTitle) {
+    if (myTitleSet.contains(myCategoryTitle)) {
+      myTitleSet.remove(myCategoryTitle);
+    } else {
+      myTitleSet.add(myCategoryTitle);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -44,12 +53,12 @@ class _MylistState extends State<Mylist> {
                     ),
                     trailing: IconButton(
                         icon: Icon(Icons.bookmark,
-                            color: widget.title[index] == activeTitle
+                            color: myTitleSet.contains(widget.title[index])
                                 ? Colors.green
                                 : Colors.grey),
                         onPressed: () {
                           setState(() {
-                            activeTitle = widget.title[index];
+                            activeSet(widget.title[index]);
                           });
                         }),
                   ),
